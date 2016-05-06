@@ -1,22 +1,26 @@
 package com.klaus.mybeanimpl;
 
+import com.klaus.myinterface.HelloWorld;
 import com.klaus.myinterface.Person;
 
 public class Student implements Person {
 	
 	private String name;
 	
+	private HelloWorld hellow;
 		
-	public String getName() {
-		return name;
+	public Student(String name,HelloWorld hellow){
+		
+		this.name=name;
+		this.hellow=hellow;
+		
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	
 	public void study() {
 		
-		System.out.println(" will study!");
+		System.out.println(name+" will study!");
+		this.hellow.printHelloWorld("nini");
 		
 	}
 

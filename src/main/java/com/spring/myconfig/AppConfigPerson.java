@@ -9,10 +9,10 @@ import com.klaus.myinterface.Person;
 @Configuration
 public class AppConfigPerson {
 
-	@Bean(name="student")
-	public Person phgherson(){
-		
-		return new Student();
-	}
+	//@Bean(name="student")
+	//public Person phgherson(){
+	//	
+		//return new Student("kaka");
+	//}
 	
 }
