@@ -13,12 +13,24 @@
      http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="student" class="com.klaus.mybeanimpl.Student">
-		<constructor-arg type="java.lang.String">
-			<value>jaja</value>
-		</constructor-arg>
-		<constructor-arg>
-			<ref bean="hellowword"/>
-		</constructor-arg>
+		<property name="name" value="klaus"></property>
+		<property name="hellow">
+			<ref bean="hellowword" />
+		</property>
+		<property name="lists">
+			<list>
+				<value>kakaka</value>
+				<ref bean="hellowword" />
+			</list>
+		</property>
+
+		<property name="maps">
+			<map>
+				<entry key="key1" value="1" />
+				<entry key="key2" value-ref="hellowword" />
+			</map>
+		</property>
+
 	</bean>
 
 </beans>  
