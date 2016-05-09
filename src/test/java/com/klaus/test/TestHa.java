@@ -2,24 +2,34 @@ package com.klaus.test;
 
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.klaus.mybeanimpl.Student;
-import com.klaus.myinterface.HelloWorld;
-import com.klaus.myinterface.Person;
-import com.spring.myconfig.AppConfig; 
+import com.klaus.myinterface.HelloWorld; 
+//import org.springframework.aop.support.RegexpMethodPointcutAdvisor;
  
 
 public class TestHa {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext act=new ClassPathXmlApplicationContext("applicationContext.xml");//,"springaplication.xml");
+		ApplicationContext act=new ClassPathXmlApplicationContext("springaplication.xml");//,"springaplication.xml");
 	
-		Person student=act.getBean("student",Student.class);
+		HelloWorld cust = (HelloWorld) act.getBean("customerServiceProxy",HelloWorld.class);
+	    
+		cust.printHelloWorld("Spring Java Config");
 		
-		student.study();
+	
+		System.out.println("*************************");
+		cust.printName();
+		System.out.println("*************************");
+		cust.printURL();
+		System.out.println("*************************");
+		try {
+			cust.printThrowException();
+		} catch (Exception e) {
+
+		}
+
+		
 		
 	//	 ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		 

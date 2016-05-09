@@ -9,10 +9,10 @@ import com.klaus.myinterface.HelloWorld;
 @Configuration
 public class AppConfigHello {
 	
-	@Bean(name="helloBean")
-    public HelloWorld helloWorld() {
-        return new HelloWorldImpl();
-   }
+	//@Bean(name="helloBean")
+    //public HelloWorld helloWorld() {
+      //  return new HelloWorldImpl();
+   //}
 	
 
 }
