@@ -2,7 +2,7 @@ package com.klaus.mybeanimpl;
 
 import com.klaus.myinterface.HelloWorld;
 
-public class HelloWorldImpl implements HelloWorld{
+public class HelloWorldImpl {
 
 	public void printHelloWorld(String msg) {
 		
